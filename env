@@ -1,0 +1,10 @@
+MONGO_USERNAME='a-madeline-bates'
+MONGO_PASSWORD='g8f374gfogfkuaegf7843gg'
+MONGO_CLUSTER='cluster1'
+MONGO_PORT=27017
+MONGO_DB=rewildMyGardenData
+
+SENDER_EMAIL='rewildmygarden@gmail.com'
+SENDER_PASSWORD='fg53r4yfG_.klH7d!!!!'
+
+DATABASE_URL=mongodb://rewild-cosmos:JwP4bNVE3IDSTtf42uMxnWqqjrTMGsJUJPLk3NnZ5iOa8FLkfWE3UrilaQ1VxOnRIlDU9YQlrmY86mQ5Ouelbg%3D%3D@rewild-cosmos.mongo.cosmos.azure.com:10255/rewildMyGardenData?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@rewild-cosmos@
