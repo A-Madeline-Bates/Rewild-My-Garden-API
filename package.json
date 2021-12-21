@@ -4,8 +4,7 @@
   "description": "rewild my garden backendAPI",
   "main": "server.js",
   "scripts": {
-    "test": "\\\"Error: no test specified\\\" && exit 1",
-    "start": "node index.js"
+    "start": "node src/server.js"
   },
   "author": "April Bates",
   "license": "ISC",

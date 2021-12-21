@@ -1,3 +1,5 @@
+console.log("in server.js");
+
 // Get dependencies
 const express = require('express');
 const path = require('path');
@@ -14,21 +16,18 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Point static path to dist
-app.use(express.static(path.join(__dirname, 'dist/Rewild-My-Garden')));
-
 // Set our api routes
 app.use('/api', api);
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/Rewild-My-Garden/index.html'));
+  res.sendFile(path.join(__dirname, 'nothing_here.html'));
 });
 
 /**
  * Get port from environment and store in Express.
  */
-const port = process.env.PORT || '3000';
+const port = process.env.WEB_PORT || 8080;
 app.set('port', port);
 
 /**
@@ -39,4 +38,4 @@ const server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-app.listen(port, () => console.log(`API running on localhost:${port}`));
+ server.listen(port, () => console.log(`API running on localhost:${port}`));
