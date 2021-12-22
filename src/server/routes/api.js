@@ -11,9 +11,8 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 
 //Options to stop this API from being accessible by everyone one is live
-//WHEN LIVE CHANGE ORIGIN FROM * TO SITE DOMAIN
 const corsOptions = {
-	origin: "*",
+	origin: ["https://rewildmygarden.azurewebsites.net", "https://rewild-my-garden.co.uk"],
   methods: ['GET', 'PUT', 'PATCH', 'POST', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
