@@ -94,9 +94,12 @@ router.get('/minTempData', function (req, res, next) {
 
 // Add a new set of user info to the database
 router.post('/userData', function (req, res, next) {
-  userData.create(req.body).then(function(userData){ // creates & saves to DB
-    res.send(userData);
-  }).catch(next);
+  // This has been commented out because we are not going to save users' information
+  // in this prototype
+  
+  // userData.create(req.body).then(function(userData){ // creates & saves to DB
+  //   res.send(userData);
+  // }).catch(next);
 });
 
 // Get other users who are within 
