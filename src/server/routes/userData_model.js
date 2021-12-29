@@ -23,15 +23,18 @@ const ourProperties = new Schema({
     "pondSent": {type: String},
 });
 
-const ourGeometry = new Schema({
-    "type": {type: String, enum: ['Point'], required: true},
-    "coordinates": {type: [Number]}
-});
+// const ourGeometry = new Schema({
+//     "type": {type: String, enum: ['Point'], required: true},
+//     "coordinates": {type: [Number]}
+// });
 
 const userDataSchema = new Schema({
     "type": {type: String},
     "properties": {type: ourProperties},
-    "geometry": {type: ourGeometry}
+    "geometry": {
+        "type": {type: String, enum: ['Point'], required: true},
+        "coordinates": {type: [Number]}
+    }
 });
 
 userDataSchema.index({ geometry: "2dsphere" });

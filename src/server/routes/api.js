@@ -12,7 +12,7 @@ const nodemailer = require("nodemailer");
 
 //Options to stop this API from being accessible by everyone one is live
 const corsOptions = {
-	origin: ["https://rewildmygarden.azurewebsites.net", "https://rewild-my-garden.co.uk"],
+	origin: ["https://rewildmygarden.azurewebsites.net", "https://rewild-my-garden.co.uk", "https://localhost:4200"],
   methods: ['GET', 'PUT', 'PATCH', 'POST', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
@@ -94,12 +94,9 @@ router.get('/minTempData', function (req, res, next) {
 
 // Add a new set of user info to the database
 router.post('/userData', function (req, res, next) {
-  // This has been commented out because we are not going to save users' information
-  // in this prototype
-  
-  // userData.create(req.body).then(function(userData){ // creates & saves to DB
-  //   res.send(userData);
-  // }).catch(next);
+  userData.create(req.body).then(function(userData){ // creates & saves to DB
+    res.send(userData);
+  }).catch(next);
 });
 
 // Get other users who are within 
